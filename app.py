@@ -118,5 +118,4 @@ def get_notes():
         }), 500
 
 if __name__ == '__main__':
-    # Run server locally
     app.run(debug=True, port=5001)
