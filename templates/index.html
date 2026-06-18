@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigQuery Release Notes Explorer</title>
+    <!-- Google Fonts for Orbitron/Outfit/Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Shifting Aurora Background -->
+    <div class="aurora-container">
+        <div class="aurora-blob aurora-1"></div>
+        <div class="aurora-blob aurora-2"></div>
+        <div class="aurora-blob aurora-3"></div>
+        <div class="aurora-blob aurora-4"></div>
+    </div>
+    
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Modern Aesthetic Sticky Header -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-logo">
+                    <div class="logo-inner"></div>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-subtitle">Google Cloud</span>
+                    <h1 class="brand-title">BigQuery Feed</h1>
+                </div>
+            </div>
+            
+            <div class="search-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search release insights..." autocomplete="off">
+            </div>
+            
+            <div class="header-actions">
+                <span id="note-count-badge" class="count-badge">Loading updates...</span>
+                <button id="refresh-btn" class="refresh-button" aria-label="Refresh Feed">
+                    <span class="btn-text">Refresh</span>
+                    <div id="spinner" class="spinner hidden"></div>
+                </button>
+            </div>
+        </header>
+
+        <!-- Filter Sub-Header -->
+        <nav class="filter-navigation">
+            <div class="filter-label">Categories</div>
+            <div class="filter-chips">
+                <button class="chip active" data-filter="all">All Updates</button>
+                <button class="chip" data-filter="Feature">Features</button>
+                <button class="chip" data-filter="Announcement">Announcements</button>
+                <button class="chip" data-filter="Deprecation">Deprecations</button>
+                <button class="chip" data-filter="Issue">Issues</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Loading Skeletons -->
+            <div id="loading-skeleton" class="skeleton-grid hidden">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-card" class="error-container hidden">
+                <div class="error-glow"></div>
+                <div class="error-icon">⚡</div>
+                <h2>Connection Interrupted</h2>
+                <p id="error-message">Unable to fetch the latest Google Cloud BigQuery release XML feed.</p>
+                <button id="retry-btn" class="retry-button">Reconnect</button>
+            </div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="empty-container hidden">
+                <div class="empty-icon">✨</div>
+                <h2>No results found</h2>
+                <p>Try refining your search terms or choosing a different filter category.</p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div id="notes-grid" class="notes-grid">
+                <!-- Injected via JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Centered Glassmorphic Modal Sheet -->
+    <div id="details-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-glow"></div>
+            <header class="modal-header">
+                <div class="modal-meta">
+                    <span id="modal-badge" class="badge">Feature</span>
+                    <time id="modal-date" class="modal-date">June 17, 2026</time>
+                </div>
+                <button id="modal-close" class="modal-close-btn" aria-label="Close modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </header>
+            <div class="modal-body-container">
+                <h2 id="modal-title" class="modal-title">Autonomous Embedding Generation</h2>
+                <div id="modal-html-content" class="modal-html-content">
+                    <!-- HTML content goes here -->
+                </div>
+            </div>
+            <footer class="modal-footer">
+                <a id="modal-source-link" href="#" target="_blank" class="modal-action-btn secondary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    Source Documentation
+                </a>
+                <button id="modal-tweet-btn" class="modal-action-btn primary">
+                    <svg class="btn-icon x-logo" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                    Share Update
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Script Entrypoint -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
