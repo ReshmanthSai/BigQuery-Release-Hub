@@ -2,7 +2,7 @@
 
 A modern, high-aesthetic single-page web dashboard designed with premium glassmorphic styling and fluid background animations. The application proxies and parses Google's official BigQuery Atom release feed, splits combined entries into distinct topic updates (Features, Announcements, Deprecations, Issues), and lets you share specific notes on X/Twitter with a single click.
 
----
+
 
 ## ✨ Key Features
 
@@ -14,7 +14,7 @@ A modern, high-aesthetic single-page web dashboard designed with premium glassmo
 *   **Persistent Modal Sheets**: Click any card to trigger a centered, frosted overlay modal displaying fully-rendered rich HTML (links, lists, inline code blocks) and a direct link to Google Cloud's documentation.
 *   **X/Twitter Intent Sharing**: Share any specific update with a pre-configured Web Intent popup that auto-populates the note's category, date, summary, URL, and hashtags.
 
----
+
 
 ## 🛠️ Technology Stack
 
