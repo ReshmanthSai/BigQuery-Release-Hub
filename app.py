@@ -57,7 +57,7 @@ def split_notes(entry_title, entry_updated, entry_link, entry_content):
         summary = clean_html(note_html)
         summary_truncated = summary[:250] + ('...' if len(summary) > 250 else '')
         
-        # Use the specific heading type or fallback to general note link
+        # Use specific heading type or fallback to general note link
         notes.append({
             'title': card_title,
             'type': note_type,
