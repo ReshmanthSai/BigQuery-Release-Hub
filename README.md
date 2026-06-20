@@ -23,13 +23,63 @@ Open any update to view complete release information, documentation links, and s
 
 ## ✨ Key Features
 
-*   **Aurora Glassmorphism Styling**: Obsidian dark base featuring subtle `backdrop-filter: blur(24px)` glass containers, fine translucent borders, and custom glowing hover translation effects.
-*   **Animated Backdrop**: Fluid, organic background gradients that slowly rotate, merge, and drift using CSS keyframe animations.
-*   **Granular XML Feed Parsing**: Google's release feed aggregates multiple updates under single dates. The backend parses and splits these entries (e.g. separate Feature, Announcement, or Issue updates) so each topic gets its own card and unique sharing link.
-*   **Interactive Search & Filters**: Instant debounced search filtering alongside dedicated category navigation chips.
-*   **Dynamic UI Refresh**: Re-fetch the XML feed on command with a custom CSS loading spin state and button locking.
-*   **Persistent Modal Sheets**: Click any card to trigger a centered, frosted overlay modal displaying fully-rendered rich HTML (links, lists, inline code blocks) and a direct link to Google Cloud's documentation.
-*   **X/Twitter Intent Sharing**: Share any specific update with a pre-configured Web Intent popup that auto-populates the note's category, date, summary, URL, and hashtags.
+<details>
+<summary><strong>🎨 Premium Glassmorphism UI</strong></summary>
+
+- Obsidian-inspired dark theme
+- Frosted glass containers using `backdrop-filter`
+- Smooth hover animations and glow effects
+- Responsive layout optimized for desktop and tablet
+
+</details>
+
+<details>
+<summary><strong>🌌 Animated Background Effects</strong></summary>
+
+- Multi-layer gradient blobs
+- Continuous floating and blending animations
+- Aurora-inspired visual design
+
+</details>
+
+<details>
+<summary><strong>🔍 Intelligent Release Note Processing</strong></summary>
+
+- Fetches Google's official BigQuery release feed
+- Parses XML Atom entries
+- Splits grouped updates into individual categorized items
+- Automatically classifies Features, Announcements, Deprecations, and Issues
+
+</details>
+
+<details>
+<summary><strong>⚡ Interactive Experience</strong></summary>
+
+- Instant search filtering
+- Category-based navigation chips
+- Dynamic feed refresh
+- Responsive card interactions
+
+</details>
+
+<details>
+<summary><strong>📄 Rich Detail Modal</strong></summary>
+
+- Fully rendered HTML content
+- Inline links and formatted code snippets
+- Direct access to Google Cloud documentation
+- Elegant overlay presentation
+
+</details>
+
+<details>
+<summary><strong>🐦 X/Twitter Sharing</strong></summary>
+
+- One-click sharing
+- Auto-generated tweet content
+- Includes category, date, summary, and hashtags
+
+</details>
 
 
 ---
