@@ -19,48 +19,67 @@ Browse categorized BigQuery release updates with real-time search, filtering, an
 
 Open any update to view complete release information, documentation links, and sharing options.
 
---
+---
+
 ## ✨ Key Features
 
-### 🎨 Premium Glassmorphism UI
+<details>
+<summary><strong>🎨 Premium Glassmorphism UI</strong></summary>
 
 - Obsidian-inspired dark theme
 - Frosted glass containers using `backdrop-filter`
 - Smooth hover animations and glow effects
 - Responsive layout optimized for desktop and tablet
 
-### 🌌 Animated Background Effects
+</details>
+
+<details>
+<summary><strong>🌌 Animated Background Effects</strong></summary>
 
 - Multi-layer gradient blobs
 - Continuous floating and blending animations
 - Aurora-inspired visual design
 
-### 🔍 Intelligent Release Note Processing
+</details>
+
+<details>
+<summary><strong>🔍 Intelligent Release Note Processing</strong></summary>
 
 - Fetches Google's official BigQuery release feed
 - Parses XML Atom entries
 - Splits grouped updates into individual categorized items
 - Automatically classifies Features, Announcements, Deprecations, and Issues
 
-### ⚡ Interactive Experience
+</details>
+
+<details>
+<summary><strong>⚡ Interactive Experience</strong></summary>
 
 - Instant search filtering
 - Category-based navigation chips
 - Dynamic feed refresh
 - Responsive card interactions
 
-### 📄 Rich Detail Modal
+</details>
+
+<details>
+<summary><strong>📄 Rich Detail Modal</strong></summary>
 
 - Fully rendered HTML content
 - Inline links and formatted code snippets
 - Direct access to Google Cloud documentation
 - Elegant overlay presentation
 
-### 🐦 X/Twitter Sharing
+</details>
+
+<details>
+<summary><strong>🐦 X/Twitter Sharing</strong></summary>
 
 - One-click sharing
 - Auto-generated tweet content
 - Includes category, date, summary, and hashtags
+
+</details>
 ---
 
 
