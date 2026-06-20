@@ -5,6 +5,11 @@ A modern, high-aesthetic single-page web dashboard designed with premium glassmo
 
 ---
 
+## 📸 Screenshots
+
+# Dashboard View
+
+ ![Dashboard](screenshots/dashboard.png)
 
 ## ✨ Key Features
 
@@ -43,6 +48,9 @@ bigquery-release-notes-app/
 │   │   └── style.css      # Custom Glassmorphic CSS design system
 │   └── js/
 │       └── app.js         # Client-side state, filters, and intent sharing
+├── screenshots/
+│   ├── dashboard.png      # Website screenshots
+│   └── modal-view.png     
 ├── .gitignore             # Git exclusion rules
 └── README.md              # Project documentation
 ```
