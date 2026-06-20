@@ -2,7 +2,6 @@
 
 A modern, high-aesthetic single-page web dashboard designed with premium glassmorphic styling and fluid background animations. The application proxies and parses Google's official BigQuery Atom release feed, splits combined entries into distinct topic updates (Features, Announcements, Deprecations, Issues), and lets you share specific notes on X/Twitter with a single click.
 
-
 ---
 
 ## 📸 Screenshots
@@ -18,6 +17,8 @@ Browse categorized BigQuery release updates with real-time search, filtering, an
 ![Modal](screenshots/modal-view.png)
 
 Open any update to view complete release information, documentation links, and sharing options.
+
+--
 
 ## ✨ Key Features
 
