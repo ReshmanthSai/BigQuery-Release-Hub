@@ -1,6 +1,6 @@
 # BigQuery Release Notes Explorer 🚀
 
-A modern, high-aesthetic single-page web dashboard designed with premium glassmorphic styling and fluid background animations. The application proxies and parses Google's official BigQuery Atom release feed, splits combined entries into distinct topic updates (Features, Announcements, Deprecations, Issues), and lets you share specific notes on X/Twitter with a single click.
+A modern, high-aesthetic single-page web dashboard designed with premium glassmorphic styling and fluid background animations. The application proxies and parses Google's official BigQuery Atom release feed, splits combined entries into distinct topic updates (Features, Announcements, Deprecations, Issues) and lets you share specific notes on X/Twitter with a single click.
 
 ---
 
@@ -77,7 +77,7 @@ Open any update to view complete release information, documentation links, and s
 
 - One-click sharing
 - Auto-generated tweet content
-- Includes category, date, summary, and hashtags
+- Includes category, date, summary and hashtags
 
 </details>
 
