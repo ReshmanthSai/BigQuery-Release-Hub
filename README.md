@@ -9,16 +9,15 @@ A modern, high-aesthetic single-page web dashboard designed with premium glassmo
 
 ### Dashboard View
 
-## 📸 Screenshots
-
-### Dashboard View
-
 ![Dashboard](screenshots/dashboard.png)
+
+Browse categorized BigQuery release updates with real-time search, filtering, and a premium glassmorphic interface.
 
 ### Detailed Release Note Modal
 
 ![Modal](screenshots/modal-view.png)
- Browse categorized BigQuery release updates with real-time search, filtering, and a premium glassmorphic interface.
+
+Open any update to view complete release information, documentation links, and sharing options.
 
 ## ✨ Key Features
 
