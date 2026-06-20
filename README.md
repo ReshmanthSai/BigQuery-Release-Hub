@@ -80,8 +80,8 @@ Open any update to view complete release information, documentation links, and s
 - Includes category, date, summary, and hashtags
 
 </details>
----
 
+---
 
 ## 🛠️ Technology Stack
 
